@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: yellow;
+
+    }
+    button{
+        size: 500px;
+        padding: 20px 80px 20px 80px;
+        border-radius: 8px;
+        background-color:darkblue;
+        color:white;
+        font-size: 25px;
+         
+        
+    
+    }
+    button:hover{
+        color: bisque;
+        background-color: cadetblue;
+    }
+    div{
+        size: 500px;
+        text-size-adjust: 500px;
+        padding: 10px 100px 10px 100px;
+        font: size 500px; 
+        font-weight:bold;
+    }
+</style>
+<body >
+
+    <h1>For Payment Please click on the Pay button to redirect to Payment gateway</h1>
+    <div><button id="rzp-button1">Pay</button></div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_3GNYgSd1trCZab", // Enter the Key ID generated from the Dashboard
+    "amount": "25000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "order_KOzs8d0T7GSbGU", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+    "prefill": {
+        "name": "Gaurav Kumar",
+        "email": "gaurav.kumar@example.com",
+        "contact": "9999999999"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+</body>
+</html>
