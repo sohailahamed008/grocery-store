@@ -1,1 +1,2 @@
 # grocery-store
+<p>The grocery store is an online platform that provides services to their doorstep. This website reduces their physical time and can be accessed anywhere and at any time. On this website, users can add their required products to their cart. The website provides easy and smooth payment procedures. Users can purchase fresh fruits and vegetables directly from farmers. Products purchased will be delivered within the given time. This website also provides part-time jobs for job seekers.</p>
